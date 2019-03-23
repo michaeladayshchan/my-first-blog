@@ -9,10 +9,13 @@
     <strong>Hi there!</strong>
     <p>It works!</p>
   </div>
-  <div>
-    <h2>Second Heading</h2>
-    <p>yup<p>
-  </div>
+  {% for post in posts %}
+    <div>
+      <p>published: {{ post.published_date }}</p>
+      <h2><a href="">{{ post.title }}</a><h2>
+      <p>{{ post.text|linebreaksbr }}</p>   
+    </div>
+  {% endfor %}
     <p><a href="https://www.google.com/">Link to google</a></p>
 
 </body>
